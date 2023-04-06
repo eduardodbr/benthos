@@ -58,7 +58,7 @@ You can access these metadata fields using [function interpolation](/docs/config
 			),
 			docs.FieldString("filter", "OData filter expression. Is not set all rows are returned. Valid operators are `eq, ne, gt, lt, ge and le`",
 				`PartitionKey eq 'foo' and RowKey gt '1000'`,
-			).Advanced().IsInterpolated(),
+			).Advanced().IsBloblang(),
 			docs.FieldString("select", "Select expression using OData notation. Limits the columns on each record to just those requested.",
 				`PartitionKey,RowKey,Foo,Bar,Timestamp`,
 			).Advanced(),
